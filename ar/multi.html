@@ -20,13 +20,17 @@
             >
             <a-assets>
                 <a-asset-item
-                    id="animated-asset"
+                    id="tiger"
                     src="assets/tiger_animation.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="crown"
+                    src="assets/crown.gltf"
                 ></a-asset-item>
             </a-assets>
 
         <a-marker
-            id="animated-marker"
+            id="tiger-marker"
             type="pattern"
             preset="custom"
             url="assets/pattern-a21.patt"
@@ -36,16 +40,35 @@
             id="markerA"
         >
             <a-entity
-                id="bowser-model"
+                id="model1"
                 scale="0.27676888162269 0.27676888162269 0.27676888162269"
                 animation-mixer="loop: repeat"
-                gltf-model="#animated-asset"
+                gltf-model="#tiger"
                 class="clickable"
                 gesture-handler
             ></a-entity>
         </a-marker>
 
-        <a-entity camera></a-entity>
+        <a-marker
+            id="crown-marker"
+            type="pattern"
+            preset="custom"
+            url="assets/pattern-B65.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="markerA"
+        >
+            <a-entity
+                id="model2"
+                scale="0.27676888162269 0.27676888162269 0.27676888162269"
+                animation-mixer="loop: repeat"
+                gltf-model="#crown"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+        </a-marker>
+       <a-entity camera></a-entity>
     </a-scene>
 
     </body>
