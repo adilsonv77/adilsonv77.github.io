@@ -14,7 +14,7 @@
                     var sceneEl = document.querySelector('a-scene');
                     sceneEl.addEventListener('loaded', 
                         function () {
-                            window.alert("Carregado...");
+                            console.log("Carregado...");
                         });
                 }
             });
@@ -31,5 +31,14 @@
             </a-assets>
 
          </a-scene>
+
+         <script>
+                    var sceneEl = document.querySelector('a-scene');
+                    sceneEl.addEventListener('loaded', 
+                        function () {
+                            console.log("Carregado...");
+                        });
+
+         </script>
     </body>
 </html>
