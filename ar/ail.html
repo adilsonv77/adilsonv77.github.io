@@ -23,7 +23,7 @@
         </head>
 
     <body>
-        <a-scene vr-mode-ui="enabled: false;">
+        <a-scene vr-mode-ui="enabled: false;" gesture-detector>
             <!-- Asset management system. -->
             <a-assets>
                 <a-asset-item id="e1" src="assets/entity-1.glb"></a-asset-item>
@@ -38,7 +38,7 @@
 
                     <a-entity
                         id="e1-model"
-                        scale="0.5 0.5 0.5"
+                        scale="0.25 0.25 0.25"
                         animation-mixer="loop: repeat"
                         gltf-model="#e1"
                         class="clickable"
