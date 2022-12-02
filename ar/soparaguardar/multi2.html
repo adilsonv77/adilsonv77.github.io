@@ -9,7 +9,12 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <a-scene embedded gesture-detector>
+        <a-scene 
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: true;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            embedded gesture-detector>
 
           <a-marker
             type="pattern"
@@ -31,8 +36,7 @@
             url="assets/pattern-B65.patt">
 
         <a-entity
-            scale="0.27676888162269 0.27676888162269 0.27676888162269"
-            animation-mixer="loop: repeat"
+             animation-mixer="loop: repeat"
             gltf-model="assets/crown.gltf"
             class="clickable"
             gesture-handler

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+
+        <script>
+            AFRAME.registerComponent('verifyLoaded',{
+                init:function(){
+    
+                    var sceneEl = document.querySelector('a-scene');
+                    sceneEl.addEventListener('loaded', 
+                        function () {
+                            window.alert("Carregado...");
+                        });
+                }
+            });
+    
+        </script>
+        </head>
+
+    <body>
+        <a-scene verifyLoaded>
+            <!-- Asset management system. -->
+            <a-assets>
+                <a-asset-item id="e1" src="assets/entity-1.glb"></a-asset-item>
+                <a-asset-item id="e2" src="assets/entity-2.glb"></a-asset-item>
+            </a-assets>
+
+            <a-camera>
+                <a-cursor></a-cursor>
+              </a-camera>
+        </a-scene>
+    </body>
+</html>
