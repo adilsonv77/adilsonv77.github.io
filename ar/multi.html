@@ -24,9 +24,14 @@
                     src="assets/tiger_animation.glb"
                 ></a-asset-item>
                 <a-asset-item
-                    id="crown"
-                    src="assets/crown.gltf"
+                    id="entity-1"
+                    src="assets/entity-1.glb"
                 ></a-asset-item>
+                <a-asset-item
+                id="crown"
+                src="assets/crown.gltf"
+            ></a-asset-item>
+
             </a-assets>
 
         <a-marker
@@ -49,6 +54,25 @@
         </a-marker>
 
         <a-marker
+            id="entity1-marker"
+            type="pattern"
+            preset="custom"
+            url="assets/pattern-b99.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                id="model3"
+                scale="0.27676888162269 0.27676888162269 0.27676888162269"
+                animation-mixer="loop: repeat"
+                gltf-model="#entity-1"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+        </a-marker>
+
+       <a-marker
             id="crown-marker"
             type="pattern"
             preset="custom"
