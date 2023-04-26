@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
       container: document.body,
-      imageTargetSrc: './targets.mind',
+      imageTargetSrc: 'https://adilsonv77.github.io/meuteste/targets.mind',
     });
     const {renderer, scene, camera} = mindarThree;
 
     const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
 
-    const raccoon = await loadGLTF('./wizard_test.glb');
+    const raccoon = await loadGLTF('https://adilsonv77.github.io/meuteste/wizard_test.glb');
     raccoon.scene.scale.set(50, 50, 50);
     raccoon.scene.position.set(0, -0.4, 0);
 
