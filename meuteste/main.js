@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     const raccoon = await loadGLTF('./wizard_test.glb');
-    raccoon.scene.scale.set(0.1, 0.1, 0.1);
+    raccoon.scene.scale.set(50, 50, 50);
     raccoon.scene.position.set(0, -0.4, 0);
 
     const anchor = mindarThree.addAnchor(0);
