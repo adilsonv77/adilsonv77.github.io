@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
 
-    const raccoon = await loadGLTF('https://adilsonv77.github.io/ar/assets/entity-2.glb');
-    
+   // const raccoon = await loadGLTF('https://adilsonv77.github.io/ar/asseats/entity-2.glb');
+   const raccoon = await loadGLTF('https://adilsonv77.github.io/meutestethreejs/wizard_test.glb');
    // raccoon.scene.scale.set(30, 30, 30);
     raccoon.scene.scale.set(0.27, 0.27, 0.27);
     raccoon.scene.position.set(0, -0.4, 0);
