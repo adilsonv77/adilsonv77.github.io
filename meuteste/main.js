@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     const raccoon = await loadGLTF('https://adilsonv77.github.io/ar/assets/entity-2.glb');
+    
    // raccoon.scene.scale.set(30, 30, 30);
     raccoon.scene.scale.set(0.1, 0.1, 0.1);
     raccoon.scene.position.set(0, -0.4, 0);
