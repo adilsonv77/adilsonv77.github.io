@@ -1,4 +1,5 @@
 import {loadGLTF} from "../libs/loader.js";
+import {Box3, Vector3} from "../libs/three.js-r132/build/three.js"
 import {mockWithVideo, mockWithImage} from '../libs/camera-mock.js';
 const THREE = window.MINDAR.IMAGE.THREE;
 
@@ -19,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
    // const raccoon = await loadGLTF('https://adilsonv77.github.io/ar/asseats/entity-2.glb');
    const raccoon = await loadGLTF('https://adilsonv77.github.io/meutestethreejs/wizard_test.glb');
    // raccoon.scene.scale.set(30, 30, 30);
-    raccoon.scene.scale.set(0.27, 0.27, 0.27);
+    //raccoon.scene.scale.set(0.27, 0.27, 0.27);
+    const box = new Box3().setFromObject(raccoon.scene);
+    const sceneSize = box.getSize(new Vector3());
     raccoon.scene.position.set(0, -0.4, 0);
 
     const anchor = mindarThree.addAnchor(0);
