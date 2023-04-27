@@ -22,8 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
    // raccoon.scene.scale.set(30, 30, 30);
     //raccoon.scene.scale.set(0.27, 0.27, 0.27);
     const box = new THREE.Box3().setFromObject(raccoon.scene);
-    const sceneSize = box.getSize(new THREE.Vector3());
-    raccoon.scene.position.set(0, -0.4, 0);
+    const sceneSize = box.getSize(new THREE.Vector3()).length() *1000;
+    raccoon.scene.scale.set(sceneSize, sceneSize, sceneSize);
+    //raccoon.scene.scale.set(0.27, 0.27, 0.27);
+    //raccoon.scene.position.set(0, -0.4, 0);
 
     const anchor = mindarThree.addAnchor(0);
     anchor.group.add(raccoon.scene);
