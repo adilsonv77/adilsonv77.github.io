@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
       container: document.body,
-      imageTargetSrc: 'https://adilsonv77.github.io/meuteste/targets.mind',
+      imageTargetSrc: 'https://adilsonv77.github.io/meutestethreejs/targets.mind',
     });
     const {renderer, scene, camera} = mindarThree;
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const raccoon = await loadGLTF('https://adilsonv77.github.io/ar/assets/entity-2.glb');
     
    // raccoon.scene.scale.set(30, 30, 30);
-    raccoon.scene.scale.set(0.1, 0.1, 0.1);
+    raccoon.scene.scale.set(0.27, 0.27, 0.27);
     raccoon.scene.position.set(0, -0.4, 0);
 
     const anchor = mindarThree.addAnchor(0);
